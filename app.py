@@ -11,7 +11,7 @@ import numpy as np
 from flask import Flask, request, jsonify, abort
 
 MODEL_PATH = "fraud_pipe.joblib"
-TRAIN_SCRIPT = "Untitled.py"
+TRAIN_SCRIPT = "final_(1)-Copy.py"
 
 app = Flask(__name__)
 pipe = None                       # will hold {"scaler": …, "model": …, "thr": …}
@@ -85,4 +85,4 @@ if __name__ == "__main__":
     # Load model on cold‑start if it exists
     if os.path.exists(MODEL_PATH):
         load_pipe()
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host="0.0.0.0", port=5000)
